@@ -1,0 +1,48 @@
+spawn-at-startup "swaybg" "-i" ".config/wallpapers/1.jpg"
+spawn-at-startup "pipewire"
+spawn-at-startup "pipewire-pulse"
+spawn-at-startup "wireplumber"
+spawn-at-startup "waybar"
+
+input { 
+	focus-follows-mouse 
+	
+	keyboard { 
+		xbk {
+			layout "de,ru"
+			options "grp:win_space_toggle"
+		}
+	}
+
+	touchpad {
+		// off
+		tap
+		natural-scroll
+		dwt
+	}
+}
+
+layout {
+	gaps 10
+	center-focused-columm "never"
+
+	default-columm-width { proportion 0.5; } 
+	preset-columm-widths { 
+		proportion 0.33333
+		proportion 0.5
+		proportion 0.66667 
+	}	
+	
+	preset-window-heights {
+		proportion 0.33333
+		proportion 0.5
+		proportion 0.66667 
+	}
+	focus-ring {
+		off 
+	}
+}
+overview {
+	zoom 0.5
+	backdrop-color "#641e1e"
+}
